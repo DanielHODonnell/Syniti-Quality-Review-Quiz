@@ -12,8 +12,8 @@ body { font-family: Arial, sans-serif; background: #585858; color: #ffffff; padd
 .hint { color: #54658f; margin-bottom: 18px; }
 .answers { display: grid; gap: 10px; }
 label.answer-option { display: flex; align-items: center; gap: 12px; padding: 14px 16px; border: 1px solid #555555; border-radius: 12px; background: #555555; cursor: pointer; }
-label.answer-option.correct { background: #e7f8e9; border-color: #7dd29b; }
-label.answer-option.wrong { background: #ffe9ec; border-color: #f17d82; }
+label.answer-option.correct { background: #1b5b34; border-color: #7dd29b; }
+label.answer-option.wrong { background: #90152a; border-color: #f17d82; }
 label.answer-option input { cursor: pointer; }
 .status.correct { background: #e7f8e9; color: #1b5b34; }
 .status.wrong { background: #ffe9ec; color: #90152a; }
