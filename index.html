@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Syniti Quality Quiz</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="quiz-layout">
+    <div class="quiz-card">
+      <div class="title-container">
+        <h1>Syniti Quality Quiz</h1>
+        <a href="mock_exam.html" class="mock-btn">Start Mock Exam</a>
+      </div>
+      <div id="question-container"></div>
+      <div class="status" id="status"></div>
+      <div class="status" id="score"></div>
+      <div class="controls">
+        <button id="prev-btn">Previous</button>
+        <button id="randomize-btn" onclick="this.disabled=true">Randomize</button>
+        <button id="submit-btn">Submit</button>
+        <button id="next-btn">Next</button>
+      </div>
+    </div>
+    <aside class="questions-panel">
+      <h2>Question navigation</h2>
+      <div class="questions-list" id="questions-list"></div>
+    </aside>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

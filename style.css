@@ -1,0 +1,45 @@
+body { font-family: Arial, sans-serif; background: #585858; color: #ffffff; padding: 2rem; }
+.quiz-card { width: 900px; height: 700px; margin: 0 auto; background: #3d3d3d; border-radius: 14px; box-shadow: 0 16px 40px rgba(0, 255, 34, 0.12); padding: 28px; display: flex; flex-direction: column; }
+.quiz-card h1 { margin-top: 0; font-size: 1.8rem; flex-shrink: 0; }
+#question-container { flex: 1; overflow-y: auto; padding-right: 8px; }
+.title-container { display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap; }
+.title-container h1 { margin: 0; flex: 1 1 auto; min-width: 220px; }
+.title-container .status { margin-top: 0; }
+.title-container button { margin-top: 0; }
+.status { margin-top: 12px; padding: 14px 18px; border-radius: 14px; font-weight: 600; flex-shrink: 0; }
+.questions-list { margin-top: 22px; }
+.question { font-size: 1.15rem; margin-bottom: 14px; }
+.hint { color: #54658f; margin-bottom: 18px; }
+.answers { display: grid; gap: 10px; }
+label.answer-option { display: flex; align-items: center; gap: 12px; padding: 14px 16px; border: 1px solid #555555; border-radius: 12px; background: #555555; cursor: pointer; }
+label.answer-option.correct { background: #e7f8e9; border-color: #7dd29b; }
+label.answer-option.wrong { background: #ffe9ec; border-color: #f17d82; }
+label.answer-option input { cursor: pointer; }
+.status.correct { background: #e7f8e9; color: #1b5b34; }
+.status.wrong { background: #ffe9ec; color: #90152a; }
+.quiz-layout { display: grid; grid-template-columns: 1fr 260px; gap: 24px; max-width: 1100px; margin: 0 auto; align-items: start; }
+.questions-panel { background: #3d3d3d; border-radius: 14px; box-shadow: 0 16px 40px rgba(0, 255, 34, 0.12); padding: 20px; height: 600px; display: flex; flex-direction: column; }
+.questions-panel h2 { margin: 0; font-size: 1.2rem; color: #26c35a; flex-shrink: 0; }
+#questions-list { display: grid; gap: 10px; margin-top: 18px; overflow-y: auto; flex: 1; }
+.question-nav-item { width: 100%; text-align: left; padding: 12px 14px; border: 1px solid #14f18a; border-radius: 12px; background: #585858; color: #c9c9c9; cursor: pointer; font-weight: 600; transition: background 0.15s ease, border-color 0.15s ease; }
+.question-nav-item:hover { background: #747474; }
+.question-nav-item.active { border-color: #14f18a; background: #747474; }
+.question-nav-item.correct { background: #e7f8e9; border-color: #7dd29b; color: #1b5b34; }
+.question-nav-item.wrong { background: #ffe9ec; border-color: #f17d82; color: #90152a; }
+.question-nav-item.correct.active { box-shadow: inset 0 0 0 1px #7dd29b; }
+.question-nav-item.wrong.active { box-shadow: inset 0 0 0 1px #f17d82; }
+.quiz-layout, .quiz-card, .questions-panel { box-sizing: border-box; }
+@media (max-width: 900px) {
+    .quiz-layout { grid-template-columns: 1fr; }
+    .questions-panel { order: -1; }
+}
+.mock-btn { padding: 12px 18px; border: none; border-radius: 12px; background: #26c35a; color: white; cursor: pointer; font-weight: 600; }
+.mock-timer-warning { background: #fff3b0; color: #6f5700; border: 1px solid #f2d26b; }
+.mock-timer-ten-warning { background: #fd6d6d; color: #851212; border: 1px solid #ff0000; }
+.toast-container { position: fixed; top: 1rem; right: 1rem; display: flex; flex-direction: column; gap: 0.75rem; z-index: 9999; pointer-events: none; }
+.toast-notification { background: rgba(255, 192, 20, 0.95); color: rgb(0, 0, 0); padding: 14px 18px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); max-width: 320px; opacity: 0; transform: translateY(-10px); transition: opacity 0.25s ease, transform 0.25s ease; pointer-events: auto; }
+.toast-notification.toast-hidden { opacity: 0; transform: translateY(-20px); }
+.toast-notification:not(.toast-hidden) { opacity: 1; transform: translateY(0); }
+.controls { margin-top: 12px; display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; flex-shrink: 0; }
+.controls button { padding: 12px 18px; border: none; border-radius: 12px; background: #26c35a; color: white; cursor: pointer; font-weight: 600; }
+.controls button:disabled { opacity: 0.6; cursor: not-allowed; }
